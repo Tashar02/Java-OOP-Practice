@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="461.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.midterm.MidtermController">
+   <children>
+      <Text layoutX="31.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Student ID:" />
+      <Text layoutX="31.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scholarship % ?" />
+      <Text layoutX="217.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No of Credits:" />
+      <Text layoutX="217.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Section:" />
+      <Text layoutX="216.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Course:" wrappingWidth="74.39999999999986" />
+      <TextField fx:id="studentIdTextField" layoutX="31.0" layoutY="50.0" />
+      <CheckBox fx:id="hasScholarshipCheckBox" layoutX="31.0" layoutY="84.0" mnemonicParsing="false" text="has scholarship?" />
+      <Separator layoutX="195.0" layoutY="26.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+      <ComboBox fx:id="selectCourseComboBox" layoutX="298.0" layoutY="30.0" onAction="#selectCourseOA" prefHeight="16.0" prefWidth="88.0" />
+      <ComboBox fx:id="selectSectionComboBox" layoutX="298.0" layoutY="87.0" prefHeight="16.0" prefWidth="88.0" />
+      <Button layoutX="419.0" layoutY="32.0" mnemonicParsing="false" onAction="#addARegisteredCourseButtonOnClick" prefHeight="94.0" prefWidth="74.0" text="Add the course to Register" wrapText="true" />
+      <Separator layoutX="518.0" layoutY="25.0" orientation="VERTICAL" prefHeight="114.0" prefWidth="0.0" />
+      <Button layoutX="549.0" layoutY="32.0" mnemonicParsing="false" onAction="#proceedToRegisterAndShowRegInfoButtonOnClick" prefHeight="94.0" prefWidth="74.0" text="Proceed to Register" wrapText="true" />
+      <Text layoutX="31.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="After Registration, the registered course detail is:" wrappingWidth="271.7367630004883" />
+      <Separator layoutX="28.0" layoutY="319.0" prefHeight="2.0" prefWidth="598.0" />
+      <Text layoutX="31.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Course Type:" />
+      <Text layoutX="31.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Section:" />
+      <Label fx:id="noOfSpecificCoursesWithSameSectionLabel" layoutX="342.0" layoutY="333.0" prefHeight="94.0" prefWidth="272.0" />
+      <Separator layoutX="318.0" layoutY="328.0" orientation="VERTICAL" prefHeight="102.0" prefWidth="6.0" />
+      <Button layoutX="31.0" layoutY="388.0" mnemonicParsing="false" onAction="#showTotalNoOfCoursesButtonOnClick" prefHeight="45.0" prefWidth="263.0" text="Show no of selected type courses having same section number" wrapText="true" />
+      <RadioButton fx:id="filteredSelectCourseTypeTheoryRadioButton" layoutX="162.0" layoutY="330.0" mnemonicParsing="false" text="Theory" />
+      <RadioButton fx:id="filteredSelectCourseTypeLabRadioButton" layoutX="235.0" layoutY="330.0" mnemonicParsing="false" text="Lab" />
+      <TextField fx:id="scholarshipRateTextField" layoutX="123.0" layoutY="113.0" prefHeight="18.0" prefWidth="58.0" />
+      <ComboBox fx:id="filteredSelectSectionComboBox" layoutX="162.0" layoutY="358.0" prefHeight="16.0" prefWidth="88.0" />
+      <Label fx:id="noOfCreditsLabel" layoutX="335.0" layoutY="62.0" prefHeight="18.0" prefWidth="52.0" />
+      <TextArea fx:id="regInfoTextArea" layoutX="26.0" layoutY="179.0" prefHeight="134.0" prefWidth="598.0" />
+   </children>
+</AnchorPane>
